@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelloKittyVsKuromi</title>
+</head>
+
+<body>
+    <script src="http://koda.nu/simple.js">
+
+        var zombies = [];
+
+        var i = 0;
+
+        while (i<100)
+        {
+            zombies.push({x:random(totalWidth), y:random(totalHeight), speed: random(1,5)});
+
+            i += 1;
+        }
+
+    var zombie = {x:random(totalWidth), y:random(totalHeight), speed: random(1,5)};
+    var player = {x:mouse, y:mouse}
+    document.body.style.backgroundImage = "url('bakgrund.jpeg')" ;
+    let beat = new Audio('hellokitty.mp3');
+
+
+    function update()
+    {
+      hideMouse();
+        clearScreen();
+
+        beat.play();
+
+        var i = 0;
+        while (i<10)
+        {
+            var zombie = zombies[i];
+         picture (mouse.x, mouse.y, "hk.webp")
+
+
+         picture (zombie.x, zombie.y, "kuromiii.gif")
+         if (zombie.x < mouse.x)
+         zombie.x += zombie.speed;
+         else 
+          zombie.x -= zombie.speed
+         if (zombie.y < mouse.y)
+          zombie.y += zombie.speed;
+         else 
+          zombie.y -= zombie.speed
+
+         if (distance(mouse, zombie) < 3)
+         {
+            alert("Game over");
+            stopUpdate();
+            beat.pause();
+            showMouse();
+         }
+         i += 1;
+        }
+
+    }
+</script>
+</body>
+</html>
