@@ -8,6 +8,22 @@
     <title>PoliceHelloKitty</title>
 </head>
 <body>
+    <script src="http://koda.nu/simple.js">
 
+        var zombies = [];
+
+        var i = 0;
+
+        while (i<100)
+        {
+            zombies.push({x:random(totalWidth), y:random(totalHeight), speed: random(1,5)});
+
+            i += 1;
+        }
+
+    var zombie = {x:random(totalWidth), y:random(totalHeight), speed: random(1,5)};
+    var player = {x:mouse, y:mouse}
+    document.body.style.backgroundImage = "url('bakgrund.jpeg')" ;
+    let beat = new Audio('hellokitty.mp3');
     
 </body>

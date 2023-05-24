@@ -1,0 +1,26 @@
+.container { 
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: beige;
+    height: 100px;
+    }
+  .hkk {
+    background: rgb(227, 139, 233);
+
+  }
+  .phk {
+    background: rgb(78, 135, 249);
+  }
+  .blue {
+    background: steelblue;
+  }
+  .container > div {
+    font-size: 5px;
+    padding: .5em;
+    color: white;
+    width: 50px;
+  }
+  body {
+    margin: 0;
+  }
